@@ -42,3 +42,10 @@ Un projet complet implémentant des **automates finis déterministes (AFD)** et 
 ### 🧱 Compilation
 ```bash
 gcc -o automate main.c
+````
+### ▶️ Exécution
+```bash
+./automate
+````
+
+
