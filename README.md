@@ -1,109 +1,126 @@
-Projet Automate - Théorie des Langages et Compilation
-https://img.shields.io/badge/License-MIT-blue
-https://img.shields.io/badge/Status-Completed-brightgreen
+🚀 Automate - Théorie des Langages et Compilation
 
-Un projet complet implémentant des automates finis déterministes et non-déterministes avec diverses opérations avancées en C.
 
-📌 Fonctionnalités
-Manipulation d'automates:
 
-Lecture/écriture depuis/vers des fichiers .dot
+Un projet complet en C pour manipuler des automates finis déterministes (AFD) et non-déterministes (AFN), avec des fonctionnalités avancées de transformation, d’analyse et de visualisation.
 
-Affichage des caractéristiques de l'automate
+✨ Conçu avec passion pour la théorie des langages et la compilation ✨
 
-Opérations de base (union, concaténation, étoile de Kleene)
+📌 Fonctionnalités principales
+🔧 Manipulation d'automates
+📥 Lecture / écriture d'automates depuis/vers des fichiers .dot
 
-Analyse:
+👀 Affichage des caractéristiques : états, transitions, alphabet, etc.
 
-Vérification d'appartenance d'un mot
+➕ Opérations sur les automates :
 
-Test de mots depuis un fichier
+Union
 
-Recherche d'états avec transitions spécifiques
+Concaténation
 
-Transformations avancées:
+Étoile de Kleene ✳️
 
-Suppression des ε-transitions
+🔍 Analyse de mots
+✅ Vérification d'appartenance d'un mot
 
-Déterminisation
+📂 Test de mots depuis un fichier
 
-Minimisation (algorithme de Brzozowski)
+🔎 Recherche d’états avec certaines transitions
 
-Intersection d'automates
+🔄 Transformations avancées
+❌ Suppression des ε-transitions
 
-Génération depuis expressions régulières
+🔁 Déterminisation (AFN → AFD)
 
-🛠 Installation & Utilisation
-Prérequis:
+🧹 Minimisation (algorithme de Brzozowski)
 
+⚔️ Intersection entre automates
+
+🧪 Génération d’automates à partir d'expressions régulières
+
+⚙️ Installation & Utilisation
+🧱 Prérequis
 Compilateur C (gcc recommandé)
 
-Make (optionnel)
+make (optionnel)
 
-Compilation:
-
+🏗️ Compilation
 bash
+Copier
+Modifier
 gcc -o automate main.c
-Exécution:
-
+▶️ Exécution
 bash
+Copier
+Modifier
 ./automate
-Génération de fichiers DOT:
-
-Le programme peut générer des fichiers .dot visualisables avec Graphviz:
+📈 Visualisation avec Graphviz
+Générez une image à partir d’un fichier .dot :
 
 bash
+Copier
+Modifier
 dot -Tpng fichier.dot -o output.png
-📂 Structure du Projet
-text
+📂 Arborescence du projet
+bash
+Copier
+Modifier
 automate/
-├── main.c                # Code source principal
-├── automate.h            # Déclarations des fonctions
-├── Makefile              # Fichier de compilation (optionnel)
-├── exemples/             # Dossier contenant des automates exemples
+├── main.c              # Code source principal
+├── automate.h          # Déclarations des fonctions
+├── Makefile            # Compilation simplifiée (optionnel)
+├── exemples/           # Automates d'exemples (.dot)
 │   ├── exemple1.dot
 │   └── exemple2.dot
-└── mots/                 # Dossier pour les fichiers de mots à tester
-    └── test_mots.txt
-🎯 Exemples d'Utilisation
-Charger un automate:
-
+├── mots/               # Mots à tester
+│   └── test_mots.txt
+└── LICENSE             # Licence du projet
+🎯 Exemples d'utilisation
+📥 Charger un automate
 c
+Copier
+Modifier
 Automate* monAutomate = lireAutomateDepuisDot("exemple1.dot");
-Vérifier un mot:
-
+✅ Vérifier un mot
 c
+Copier
+Modifier
 if (motEstEngendre(monAutomate, "aba")) {
     printf("Le mot est accepté !\n");
 }
-Opérations avancées:
-
+🧹 Minimisation & export
 c
+Copier
+Modifier
 Automate* minimal = minimisationBrzozowski(monAutomate);
 genererFichierDot(minimal, "automate_minimal.dot");
-📚 Théorie Implémentée
-Automates finis non-déterministes (AFN)
+📚 Concepts théoriques couverts
+Automates Finis Non-Déterministes (AFN)
 
-Automates finis déterministes (AFD)
+Automates Finis Déterministes (AFD)
 
-ε-fermeture
+ε-fermeture & construction de sous-ensembles
 
-Construction de sous-ensembles
-
-Algorithme de minimisation de Brzozowski
+Algorithme de Brzozowski (minimisation)
 
 Opérations sur les langages réguliers
 
-🤝 Contribution
-Les contributions sont les bienvenues ! Ouvrez une issue ou soumettez une pull request pour :
+🤝 Contributions bienvenues !
+Tu veux améliorer ce projet ? Tu es le·la bienvenu·e !
+N’hésite pas à :
 
-Corriger des bugs
+🐛 Signaler des bugs
 
-Ajouter de nouvelles fonctionnalités
+🌟 Proposer de nouvelles fonctionnalités
 
-Améliorer la documentation
+📖 Améliorer la documentation
+
+📬 Ouvre une issue ou envoie une pull request !
 
 📜 Licence
-Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
+Ce projet est sous licence MIT — consulte LICENSE pour les détails.
 
-✨ Fait avec passion pour la théorie des langages et la compilation ✨
+❤️ Remerciements
+Ce projet a été réalisé dans le cadre du module Théorie des Langages et Compilation
+
+Merci aux enseignants et camarades pour leur soutien et retours constructifs.
